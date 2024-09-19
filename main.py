@@ -1,8 +1,9 @@
+import os
 import requests
 import json
 
 URL = "https://api.openai.com/v1/chat/completions"
-API_KEY = "some-api-key"
+API_KEY = os.environ.get('OPENAI_API_KEY')
 
 payload = json.dumps({
   "model": "gpt-3.5-turbo",
